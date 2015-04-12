@@ -1,7 +1,0 @@
-node_modules/*
-!node_modules/dpd-express
-# Deployd
-/data
-.dpd
-store
-.c9
