@@ -1,0 +1,23 @@
+{
+  "buildPath": "../build/public/",
+  "lessSrc": "app/less/custom/main.less",
+  "jsSrc": [
+    "app/bower_components/angular/angular.js",
+    "app/bower_components/angular-animate/angular-animate.js",
+    "app/bower_components/angular-resource/angular-resource.js",
+    "app/bower_components/angular-ui-router/release/angular-ui-router.js",
+
+    "app/scripts/app.js",
+    "app/scripts/services/UserService.js",
+    "app/scripts/controllers/ApplicationCtrl.js",
+    "app/scripts/controllers/AddEditUserCtrl.js",
+    "app/scripts/controllers/UsersCtrl.js",
+    "app/scripts/controllers/HomeCtrl.js",
+    "app/scripts/directives/context-menu.js"
+],
+"filesToMove": [
+      "app/images/**/*.*",
+      "app/fonts/**/*.*",
+      "app/favicon.ico"
+    ]
+}

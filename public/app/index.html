@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="userApp">
+
+<head>
+
+    <meta charset="utf-8">
+    
+    <meta name="description" content="user management application using MEAN stack">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="author" href="https://github.com/hs105133">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- build:css -->
+    <link rel="stylesheet" href=".temp/main.css">   
+    <!-- endbuild -->
+    <title ng-bind="'User - ' + pageTitle">User Management</title>
+
+</head>
+
+<body ng-controller="ApplicationCtrl">
+    <nav ng-if="!hideNavbar" class="navbar navbar-inverse navbar-fixed-top" ng-include="'views/navbar.html'"></nav>
+
+    <div id="mainContent" ui-view class="slide-animation"></div>        
+
+    <footer class="footer text-center" ng-if="!hideNavbar">
+        User Manager &copy; 2015 
+    </footer>        
+
+    <div ng-show="isViewLoading" id="loading"><i class="fa fa-spinner fa-spin"></i>Loading <span class="hidden-xs">the awesome</span></div>
+
+
+    <!-- build:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/UserService.js"></script>
+    <script src="scripts/controllers/ApplicationCtrl.js"></script>
+    <script src="scripts/controllers/AddEditUserCtrl.js"></script>
+    <script src="scripts/controllers/UsersCtrl.js"></script>
+    <script src="scripts/controllers/HomeCtrl.js"></script>
+    <script src="scripts/directives/context-menu.js"></script>
+     <!-- endbuild -->
+     
+     </body>
+     </html>
+     
+     
+     
+     

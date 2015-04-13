@@ -1,0 +1,40 @@
+<div class="col-sm-12 mTop" id="usersList">
+    <div class="table-responsive">
+        <table class="table table-bordered" contextmenu-container="meta.contextmenu">
+            <thead>
+                <tr>
+                    <th ng-click="sortType = 'firstName'; sortReverse = !sortReverse">First Name
+                        <span ng-show="sortType == 'firstName' && !sortReverse" class="fa fa-caret-down pull-right"></span>
+                        <span ng-show="sortType == 'firstName' && sortReverse" class="fa fa-caret-up pull-right"></span>
+                    </th>
+                    <th ng-click="sortType = 'lastName'; sortReverse = !sortReverse">Last Name
+                        <span ng-show="sortType == 'lastName' && !sortReverse" class="fa fa-caret-down pull-right"></span>
+                        <span ng-show="sortType == 'lastName' && sortReverse" class="fa fa-caret-up pull-right"></span>
+                    </th>
+                    <th ng-click="sortType = 'email'; sortReverse = !sortReverse">Email
+                        <span ng-show="sortType == 'email' && !sortReverse" class="fa fa-caret-down pull-right"></span>
+                        <span ng-show="sortType == 'email' && sortReverse" class="fa fa-caret-up pull-right"></span>
+                    </th>
+                    <th ng-click="sortType = 'phone'; sortReverse = !sortReverse">Phone
+                        <span ng-show="sortType == 'phone' && !sortReverse" class="fa fa-caret-down pull-right"></span>
+                        <span ng-show="sortType == 'phone' && sortReverse" class="fa fa-caret-up pull-right"></span>
+                    </th>
+                    <th ng-click="sortType = 'status'; sortReverse = !sortReverse">State
+                        <span ng-show="sortType == 'status' && !sortReverse" class="fa fa-caret-down pull-right"></span>
+                        <span ng-show="sortType == 'status' && sortReverse" class="fa fa-caret-up pull-right"></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users | orderBy:sortType:sortReverse" context-menu="menuOptions">
+                    <td>{{ user.firstName }}</td>
+                    <td>{{ user.lastName }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.status ? 'Active' : 'Inactive' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
