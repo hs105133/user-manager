@@ -30,53 +30,22 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
-}
-
-@-webkit-keyframes slideOutDown {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    visibility: hidden;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-}
-
-@keyframes slideOutDown {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    visibility: hidden;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-}
-
-.slideOutDown {
-  -webkit-animation-name: slideOutDown;
-  animation-name: slideOutDown;
+  position: relative;
 }
 
 
-/*.slide-animation.ng-leave {
-    -webkit-animation:slideOutLeft 0.4s both ease-in;
-    animation:slideOutLeft 0.4s both ease-in;
-    z-index: 10;
-}*/
 .slide-animation.ng-enter {
-    -webkit-animation:slideInRight 0.4s both ease-in;
+     -webkit-animation:slideInRight 0.4s both ease-in;
     animation:slideInRight 0.4s both ease-in;
     z-index: 20;
+}
+
+#contextMenu {
+    -webkit-animation:slideInUp 0.2s both ease-in;
+    animation:slideInUp 0.2s both ease-in;
 }
 
 .alert {
