@@ -1,5 +1,5 @@
 User Management
-==========
+===============
 
 - User listing
 - Create User
@@ -12,12 +12,22 @@ User Management
 
 http://hs105133.github.io/user-manager/build/public
 
+https://umapp.herokuapp.com/#/users
+
+
 #### Client Side ( Angular JS )
 
 Client side requires REST API in form of JSON response from back-end.
 
+### Run application in browser
 ```
 cd user-manager
+node production.js
+```
+### Watch new changes
+
+```
+cd user-manager/public
 gulp watch
 ```
 
@@ -43,4 +53,12 @@ cd user-manager/public
 gulp
 ```
 
-![build process](githubimg/build.png)
+![build processs](githubimg/build.png)
+
+## Coming Up Next...
+
+- Code Coverage
+- Automatic run test during development
+- Integration test
+- Run test in browser
+- Continuous Integration ( CI )

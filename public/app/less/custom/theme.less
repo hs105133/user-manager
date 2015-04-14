@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'Shadows Into Light Two';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Shadows Into Light Two'), local('ShadowsIntoLightTwo-Regular'), url(../fonts/shadowsintolighttwo.woff) format('woff');
+}
+
+// Navbar =====================================================================
+
+.navbar {
+
+  &-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: @brand-primary;
+    }
+  }
+}
+
+// Forms ======================================================================
+
+
+.has-warning {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: @brand-warning;
+  }
+
+  .form-control,
+  .form-control:focus,
+  .input-group-addon {
+    border: 1px solid @brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: @brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus,
+  .input-group-addon {
+    border: 1px solid @brand-danger;
+  }
+}
+
+.dropdown-menu {
+
+  & > li > a:hover,
+  & > li > a:focus {
+    background-image: none;
+  }
+}

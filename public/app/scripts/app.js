@@ -10,8 +10,7 @@ angular.module('userApp', ['ui.router', 'ngAnimate', 'ngResource'])
         .state('home', {
             url: '/home',
             templateUrl: 'views/home.html',
-            title: 'Home',
-            controller: "HomeCtrl"
+            title: 'Home'
         })
         .state('users', {
             url: '/users',

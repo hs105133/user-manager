@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="utf-8">
-    
     <meta name="description" content="user management application using MEAN stack">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -19,7 +18,7 @@
 
 </head>
 
-<body ng-controller="ApplicationCtrl">
+<body>
     <nav ng-if="!hideNavbar" class="navbar navbar-inverse navbar-fixed-top" ng-include="'views/navbar.html'"></nav>
 
     <div id="mainContent" ui-view class="slide-animation"></div>        
@@ -39,10 +38,8 @@
 
     <script src="scripts/app.js"></script>
     <script src="scripts/services/UserService.js"></script>
-    <script src="scripts/controllers/ApplicationCtrl.js"></script>
     <script src="scripts/controllers/AddEditUserCtrl.js"></script>
     <script src="scripts/controllers/UsersCtrl.js"></script>
-    <script src="scripts/controllers/HomeCtrl.js"></script>
     <script src="scripts/directives/context-menu.js"></script>
      <!-- endbuild -->
      
