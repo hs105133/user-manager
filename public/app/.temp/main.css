@@ -8118,8 +8118,8 @@ table .info a,
 }
 @-webkit-keyframes slideInUp {
   0% {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
     visibility: visible;
   }
   100% {
@@ -8129,8 +8129,8 @@ table .info a,
 }
 @keyframes slideInUp {
   0% {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
     visibility: visible;
   }
   100% {
@@ -8152,15 +8152,6 @@ table .info a,
   -webkit-animation: slideInUp 0.2s both ease-in;
   animation: slideInUp 0.2s both ease-in;
 }
-.alert {
-  display: none;
-}
-.flash {
-  display: block;
-  -webkit-animation: scaleUp 0.5s both ease-in;
-  -moz-animation: scaleUp 0.5s both ease-in;
-  animation: scaleUp 0.5s both ease-in;
-}
 /* slide in from the right */
 @keyframes slideInRight {
   from {
@@ -8179,60 +8170,6 @@ table .info a,
   to {
     -webkit-transform: translateX(0);
   }
-}
-/* slide in from the bottom */
-/* @keyframes slideOutLeft {
-    to {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
-}
-@-webkit-keyframes slideOutLeft {
-    to {
-        -webkit-transform: translateX(-100%);
-    }
-}*/
-/* scale up */
-@keyframes scaleUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes scaleUp {
-  from {
-    opacity: 0.3;
-    -webkit-transform: scale(0.8);
-  }
-}
-/** delete animation **/
-.list-group-item.ng-enter,
-.list-group-item.ng-leave {
-  transition: all ease 0.2s;
-  -moz-transition: all ease 0.2s;
-  -webkit-transition: all ease 0.2s;
-  -o-transition: all ease 0.2s;
-}
-.list-group-item.ng-leave.ng-leave-active {
-  max-height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  border-top-width: 0;
-  border-bottom-width: 0;
-}
-.list-group-item.ng-leave {
-  overflow: hidden;
-  max-height: 64px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
 }
 tr.ng-enter,
 tr.ng-leave {
@@ -8350,6 +8287,10 @@ body {
 #usersList th {
   background-color: #E4E4E4;
 }
+#usersList .table-bordered > thead {
+  border-top: 1px solid #797979;
+  cursor: default;
+}
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
@@ -8358,12 +8299,53 @@ body {
 .table-bordered > tfoot > tr > td {
   border-color: #797979;
 }
-/*#contextMenu.popover{
-  border 1px solid #797979;
-} 
-*/
+#contextMenu {
+  position: relative;
+  background: #fff;
+  border: 1px solid #797979;
+  padding: 0;
+}
+#contextMenu > li {
+  border-bottom: 1px solid #797979;
+}
+#contextMenu > li:last-child {
+  border-bottom: none;
+}
+#contextMenu > li a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+#contextMenu:after,
+#contextMenu:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+#contextMenu:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 9px;
+  margin-left: -9px;
+}
+#contextMenu:before {
+  border-color: rgba(121, 121, 121, 0);
+  border-bottom-color: #797979;
+  border-width: 10px;
+  margin-left: -10px;
+}
 @media (max-width: 768px) {
   #home .btn-default {
     font-size: 1.2em;
+  }
+  #usersList table {
+    table-layout: auto;
+  }
+  .fa.pull-right {
+    float: none !important;
   }
 }

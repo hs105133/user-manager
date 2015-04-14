@@ -117,19 +117,70 @@ display: none !important;
 #usersList th{
   background-color: #E4E4E4; 
 }
-
+#usersList .table-bordered > thead{
+    border-top: 1px solid #797979;
+    cursor: default;
+}
 .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td
 {
   border-color: #797979;  
 }
 
-/*#contextMenu.popover{
-  border 1px solid #797979;
-} 
-*/
+#contextMenu {
+  position: relative;
+  background: #fff;
+  border: 1px solid #797979;
+  padding: 0;
+}
+
+#contextMenu > li{
+  border-bottom: 1px solid #797979;
+}
+
+#contextMenu > li:last-child{
+  border-bottom: none;
+}
+
+#contextMenu > li a{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#contextMenu:after, #contextMenu:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+#contextMenu:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 9px;
+  margin-left: -9px;
+}
+#contextMenu:before {
+  border-color: rgba(121, 121, 121, 0);
+  border-bottom-color: #797979;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
 
 @media (max-width: 768px) {
   #home .btn-default{
     font-size: 1.2em;
+  }
+
+  #usersList table{
+    table-layout: auto;  
+  }
+
+  .fa.pull-right{
+    float: none !important;
   }
 }
