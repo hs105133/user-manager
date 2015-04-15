@@ -1,11 +1,22 @@
 <div class="container-fluid">
-    <div class="navbar-brand"><a ui-sref="users"><i class="fa fa-users fa-lg white"></i> Users</a>
+    
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div class="navbar-brand"><a ui-sref="users"><i class="fa fa-users fa-lg white"></i> Users</a>
     </div>
+	</div>
 
+	<div class="collapse navbar-collapse" collapse="!isCollapsed">
     <ul class="list-inline navbar-right">
         <li ui-sref-active="active"><a ui-sref="home">HOME</a>
         </li>
         <li ui-sref-active="active"><a ui-sref="addUser">Add New User</a>
         </li>
     </ul>
+    </div>
 </div>

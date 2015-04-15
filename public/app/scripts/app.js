@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('userApp', ['ui.router', 'ngAnimate', 'ngResource'])
+angular.module('userApp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngResource'])
 
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
