@@ -55,10 +55,58 @@ gulp
 
 ![build processs](githubimg/build.png)
 
+
+## Testing
+
+### Unit Testing
+
+> enable `reporters: ['spec']` for verbose terminal output like below screenshot & comment `reporters: ['progress', 'coverage']` in karma.conf.js  
+
+```
+cd user-manager/public
+gulp unit
+```
+
+![Unit Test Report](githubimg/unit-test.png)
+
+### End to End Testing
+
+> enable `reporters: ['spec']` for verbose terminal output like below screenshot & comment `reporters: ['progress', 'coverage']` in karma.conf.js  
+
+**By using protractor directly**
+
+```
+// from one terminal
+webdriver-manager start
+// from another terminal
+cd user-manager/public/test
+protractor protractor-conf.js
+```
+
+![E2E Test Report](githubimg/e2e-test.png)
+
+
+**Or by using gulp**
+
+```
+cd user-manager/public
+gulp e2e
+```
+
+## Run full test ( unit+e2e )
+
+```
+gulp test
+```
+
+
+## Code Coverage
+
+`gulp unit` will generate `public/report/coverage/report-html/index.html`
+
+http://hs105133.github.io/user-manager/public/report/coverage/report-html/public
+
+
 ## Coming Up Next...
 
-- Code Coverage
-- Automatic run test during development
-- Integration test
-- Run test in browser
 - Continuous Integration ( CI )

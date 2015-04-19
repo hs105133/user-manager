@@ -51,3 +51,8 @@ angular.module('userApp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngResource
         $rootScope.pageTitle = $state.current.title;
     });
 });
+
+function greet(name) {
+  return 'Hello, ' + name + '!';
+}
+
