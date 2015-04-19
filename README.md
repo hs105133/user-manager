@@ -104,7 +104,7 @@ gulp test
 
 `gulp unit` will generate `public/report/coverage/report-html/index.html`
 
-http://hs105133.github.io/user-manager/public/report/coverage/report-html/public
+http://hs105133.github.io/user-manager/public/report/coverage/report-html
 
 
 ## Coming Up Next...
