@@ -19,6 +19,15 @@ https://umapp.herokuapp.com/#/users
 
 Client side requires REST API in form of JSON response from back-end.
 
+```
+// Setup
+cd user-manager
+npm install
+cd  user-manager/public
+npm install
+bower install
+```
+
 ### Run application in browser
 ```
 cd user-manager
